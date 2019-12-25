@@ -6,6 +6,9 @@
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-build</artifactId>
 	<version>${revision}</version>
+	<modules>
+		<module>my-boot-Study</module>
+	</modules>
 	<packaging>pom</packaging>
 	<name>Spring Boot Build</name>
 	<description>Spring Boot Build</description>
@@ -83,6 +86,7 @@
 			<modules>
 				<module>spring-boot-project</module>
 				<!-- Samples are built via the invoker plugin -->
+				<module>spring-boot-samples</module>
 				<module>spring-boot-samples-invoker</module>
 				<module>spring-boot-tests</module>
 			</modules>
