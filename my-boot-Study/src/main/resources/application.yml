@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: test
+server:
+  port: 8001
+myapp:
+  mail:
+    email:  196787677@qq.com
+    enabled: true
+    name:  my001
+    servers:
+      - ser001
+      - ser002
+      - ser003
+##debug: true
+logging:
+  path: logs/
+

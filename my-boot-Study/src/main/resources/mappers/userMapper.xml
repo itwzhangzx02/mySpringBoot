@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itwzhangzx.boot.dao.UserMapper"><cache/>
+
+  <select id="selectUser"  parameterType="String" resultType="User">
+    select * from u_user where usercode = #{id}
+  </select>
+
+
+  <select id="selectUserByIdAndName"  parameterType="String" resultType="User">
+    select * from u_user where usercode = #{param1} and username = #{param2}
+  </select>
+
+  <select id="selectUserByArgs"  parameterType="String" resultType="User">
+    select * from u_user where usercode = #{arg0} and username = #{arg1}
+  </select>
+
+  <update id="updateName"  parameterType="String" >
+    update u_user set username = #{name} where usercode= #{id}
+  </update>
+
+  <insert id="insert" parameterType="User">
+    insert into u_user(usercode,username,createtime,usertype,mobile) values (#{userCode},#{userName}
+    ,#{createTime},#{userType},#{mobile});
+  </insert>
+
+  <insert id="batchInsert" parameterType="User">
+    insert into u_user(usercode,username,createtime,usertype,mobile)
+    values
+    <foreach collection="list" item="user" separator=",">
+      (#{user.userCode},#{user.userName}
+      ,#{user.createTime},#{user.userType},#{user.mobile})
+    </foreach>
+
+  </insert>
+
+  <select id="selectUserByIdFromTable"  parameterType="String" resultType="User">
+    select * from ${tableName} where usercode= #{id}
+  </select>
+
+  <select id="selectUserFromTable"  parameterType="String" resultType="User">
+    select * from ${tableName}
+  </select>
+
+</mapper>
