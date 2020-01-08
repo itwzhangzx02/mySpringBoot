@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itwzhangzx.boot.dao.UserByH2DatabaseMapper"><cache/>
+
+  <select id="selectUser"  parameterType="String" resultType="com.itwzhangzx.boot.pojo.h2pojo.User">
+    select * from  user  where name = #{id}
+  </select>
+
+
+
+</mapper>

@@ -12,6 +12,6 @@ public class UserService {
 
 	public User selectUser(String id){
 
-		return userMapper.selectUser("10");
+		return userMapper.selectUser(id);
 	}
 }
