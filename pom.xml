@@ -9,6 +9,7 @@
 	<modules>
 		<module>my-boot-Study</module>
 		<module>my-boot-study-starter</module>
+		<module>my-boot-study-dynamicDatasource</module>
 	</modules>
 	<packaging>pom</packaging>
 	<name>Spring Boot Build</name>

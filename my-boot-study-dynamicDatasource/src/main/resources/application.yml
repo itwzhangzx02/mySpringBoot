@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    primary:
+      url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf-8
+      username: zhangzx
+      password: 123
+      driverClassName: com.mysql.cj.jdbc.Driver
+    slave1:
+      url: jdbc:mysql://127.0.0.1:3306/slave1?characterEncoding=utf-8
+      username: zhangzx
+      password: 123
+      driverClassName: com.mysql.cj.jdbc.Driver
+    names: primary,slave1
+
+
+

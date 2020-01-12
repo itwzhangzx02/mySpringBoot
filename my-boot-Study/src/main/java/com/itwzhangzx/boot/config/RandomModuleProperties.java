@@ -28,7 +28,4 @@ public class RandomModuleProperties {
    int  intnumber;
 
    String stringValue ;
-
-
-
 }
